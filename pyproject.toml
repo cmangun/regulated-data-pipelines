@@ -1,0 +1,43 @@
+[project]
+name = "regulated-data-pipelines"
+version = "0.1.0"
+description = "Compliant ETL patterns for regulated environments"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Christopher Mangun", email = "cmangun@gmail.com" }]
+requires-python = ">=3.11"
+keywords = ["etl", "pipeline", "compliance", "audit", "healthcare"]
+
+dependencies = [
+    "pydantic>=2.9.2",
+    "pandas>=2.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.8.4",
+]
+
+[project.scripts]
+pipeline = "pipeline.run:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = []
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
