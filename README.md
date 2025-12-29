@@ -1,5 +1,7 @@
 # Regulated Data Pipelines
 
+![Architecture](./docs/architecture.png)
+
 [![CI](https://github.com/cmangun/regulated-data-pipelines/actions/workflows/ci.yml/badge.svg)](https://github.com/cmangun/regulated-data-pipelines/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python)]()
 [![Pydantic](https://img.shields.io/badge/Pydantic-2.x-red?style=flat-square)]()

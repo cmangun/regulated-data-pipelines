@@ -1,0 +1,6 @@
+flowchart LR
+  Source[(Source)] --> Validate[Validate]
+  Validate --> Transform[Transform]
+  Transform --> Output[(Output)]
+  Transform --> Audit[(Audit Log)]
+  Transform --> Lineage[(Lineage)]
